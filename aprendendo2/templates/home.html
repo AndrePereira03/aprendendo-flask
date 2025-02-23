@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Contatos</h1>
+    <u1>
+        {% for contato in contatos %}
+            <li>{{ contato.nome }} - {{ contato.telefone }} :
+                <a href = "/editar/{{contato.id}}">Editar</a> <a href = "/deletar/{{contato.id}}">Deletar</a>
+            </li>
+        {% endfor %}
+    </u1> 
+    <a href = "/registrar">Registrar Contato</a>       
+</body>
+</html>
